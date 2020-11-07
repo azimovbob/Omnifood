@@ -1,0 +1,66 @@
+
+
+
+/*big tablet to 1200px(width smaller than the 1140px row)*/
+@media only screen and (max-width: 1200px){
+    
+    .hero-text-box {
+        width: 100%;
+        padding: 0 2%;
+    }
+    
+    .row{padding: 0 2%;}
+}
+
+/*small tablets to  and big tablets from 768 to 1023x*/
+@media only screen and (max-width: 1043px){
+    
+    body{
+        font-size: 16px;
+    }
+    
+    section { padding: 60px 0;}
+    
+    .long-copy {
+        width: 80%;
+        margin-left: 10%;
+    }
+    
+    .steps-box:first-child{margin-top: 10px; }
+
+    .steps-box:last-child{
+        margin-top: 10px;
+    }
+    
+    .works-step{
+        margin-bottom: 40px;
+    }
+
+    .works-step:last-of-type{
+        margin-bottom: 60px;
+    }
+    
+    .app-screen { width: 50%;}
+    
+    .btn-app img{
+        margin-right: 5px; 
+    }
+
+    .icon-small{
+        width: 12px;
+        margin-right: 5px;
+    }
+    
+    
+}
+
+/*phones and small tablets from 481 to 767px*/
+@media only screen and (max-width: 767px){
+    
+}
+
+/*small phones from 0 to 480px*/
+@media only screen and (max-width: 480px){
+    
+}
+
