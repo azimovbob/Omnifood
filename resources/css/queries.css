@@ -51,16 +51,136 @@
         margin-right: 5px;
     }
     
+    .city-feature{
+       font-size: 90%;
+    }
     
+    .plan-box{
+        width: 100%;
+        margin: 0;
+    }
+    
+    .plan-price{
+        font-size: 250%;
+    }
+
+    .plan-box ul li{
+        font-size: 90%;
+    }
+
+    .contact-form { width: 80%;}
 }
 
 /*phones and small tablets from 481 to 767px*/
 @media only screen and (max-width: 767px){
+    body{font-size: 14px;}
     
+    section{padding: 40px;}
+    
+    h1{
+        font-size: 200%;
+    }
+    
+    h2{
+        font-size: 140%;
+    }
+    
+    .col{ width: 100%;}
+    
+    h2:after {
+        margin-top: 20px;
+    }
+    
+    .main-nav{
+        float: left;
+        margin-top: 25px;
+        margin-left: 25px;
+        display: none;
+    }
+    
+    
+    .main-nav li{
+        display: block;
+    }
+    
+    .main-nav li a:link,
+    .main-nav li a:visited{
+        display: block;
+        border: 0;
+        padding: 5px;
+        font-size: 100%;
+    }
+    
+    .main-nav li a:hover,
+    .main-nav li a:active{
+        border:0;
+    }
+    
+
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited {
+        padding: 10px 0px;
+        color: #555;
+    }   
+
+    .sticky .main-nav {
+        margin-top: 10px;
+    }
+
+    .sticky .mobile-nav-icon{
+        margin-top: 15px;
+    }
+    
+    .sticky .mobile-nav-icon ion-icon{
+        color: #555;
+    }
+    .mobile-nav-icon{
+        display: inline-block; 
+    }
+    
+    
+    .long-copy{
+        width: 100%;
+        margin-left: 0%;
+    }
+    
+    .steps-box:first-child{
+        text-align: center;
+    }
+    
+    .app-screen { width: 40%;}
+    
+    .works-step{
+        margin-bottom: 40px;
+    }
+
+    .works-step:last-of-type{
+        margin-bottom: 60px;
+    }
+    
+    .works-step div{
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        padding: 4px;
+        font-size: 120%;
+        margin-right: 15px;
+    }
 }
 
 /*small phones from 0 to 480px*/
 @media only screen and (max-width: 480px){
+    html{
+        overflow-x: hidden;
+    }
     
+    .contact-form{
+        width: 100%;
+    }
+    
+    section{
+        padding: 10px 0px;
+    }
+
 }
 

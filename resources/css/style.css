@@ -6,6 +6,7 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -155,6 +156,7 @@ input[type=submit]:active,{
     background-color: #cf6d17;
     border: 1px solid #cf6d17;
     color: #fff;
+    -webkit-transition: background-color 0.8s, border 0.8s, color 0.8s;
     transition: background-color 0.8s, border 0.8s, color 0.8s;
 }
 
@@ -162,6 +164,8 @@ input[type=submit]:active,{
 /* Header */
 /*---------------------------------*/
 header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.71)), to(rgba(0, 0, 0, 0.71))),
+        url(images/hero.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.71)),
         url(images/hero.jpg);
     background-size: cover;
@@ -175,15 +179,26 @@ header {
     width: 1140px;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
 }
 
-.logo {
+.logo{
     height: 100px;
     width: auto;
     float: left;
     margin-top: 20px;
 }
+
+.logo-black{
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0px;
+}
+
+/*main navi*/
 
 .main-nav {
     float: right;
@@ -208,9 +223,50 @@ header {
 .main-nav li a:hover,
 .main-nav li a:active {
     border-bottom: 2px solid #e67e22;
+    -webkit-transition: border-bottom 0.2s;
     transition: border-bottom 0.2s;
 }
 
+.sticky {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255,255,255,1);
+    box-shadow: 0 2px 2px #ebe9e9;
+    z-index: 9999;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 16px 0px;
+    color: #555;
+}
+
+.sticky .logo-black{
+    display: block;
+}
+
+.sticky .logo{
+    display: none;
+}
+
+.sticky .main-nav {
+    margin-top: 18px;
+}
+
+/*mobile navi*/
+.mobile-nav-icon{
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon ion-icon{
+    font-size: 200%;
+    color: #fff;
+}
 /*---------------------------------*/
 /* FEATURES */
 /*---------------------------------*/
@@ -249,12 +305,17 @@ header {
     opacity: 0.7;
     width: 100%;
     height: auto;
+    -webkit-transform: scale(1.15);
     transform: scale(1.15);
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
     transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
 
 .meal-photo img:hover{
     opacity: 1;
+    -webkit-transform: scale(1.03);
     transform: scale(1.03);
 }
 
@@ -330,6 +391,7 @@ header {
     text-decoration: none;
     padding-bottom: 1px;
     border-bottom: 1px solid #e67e22;
+    -webkit-transition: border-bottom 0.2s, color 0.2s;
     transition: border-bottom 0.2s, color 0.2s
 }
 
@@ -344,6 +406,7 @@ header {
 /*---------------------------------*/
 
 .section-testimonial{
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.8)), to(rgba(0,0,0,0.8))),url(images/back-customers.jpg);
     background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(images/back-customers.jpg);
     background-size: cover;
     color: white;
@@ -394,6 +457,7 @@ cite img{
     border-radius: 5px;
     width: 90%;
     margin-left: 5%;
+    -webkit-box-shadow: 0 2px 2px #cbcbcb;
     box-shadow: 0 2px 2px #cbcbcb;
 }
 
@@ -503,6 +567,7 @@ footer{
 .footer-nav li:last-child,
 .social-links li:last-child{
     margin: 0;
+    -webkit-transition: color 0.2s;
     transition: color 0.2s;
 }
 
@@ -526,6 +591,7 @@ footer p {
 .icon-twitter,
 .icon-google,
 .icon-instagram{
+    -webkit-transition: color 0.2s;
     transition: color 0.2s;
 }
 
@@ -549,5 +615,28 @@ footer p {
 }
 
 /*---------------------------------*/
-/* Tablet */
+/* Animation*/
 /*---------------------------------*/
+
+.js--wp-1,.js--wp-2,.js--wp-3{
+    opacity: 0;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+.js--wp-1.animate__fadeIn{
+    opacity: 1;
+}
+
+.js--wp-2.animate__fadeInUp{
+    opacity: 1;
+}
+
+.js--wp-3.animate__fadeIn{
+    opacity: 1;
+}
+
+.plan-box{
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
